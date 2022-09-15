@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Format calculator</title>
+</head>
+<body>
+    
+    
+    <input type="number" name="widt" id="widt">
+    <input type="number" name="heig" id="heig">
+
+    <button id="btn_calc">Calculer</button>
+    
+</body>
+</html>
+
+<script>
+    var widt_n = document.getElementById('widt')
+    var heig_n = document.getElementById('heig')
+
+    widt_n.addEventListener('keyup', ()=>{
+        heig_n.value = (widt_n.value * 297 / 210).toFixed(2);
+    })
+    heig_n.addEventListener('keyup', ()=>{
+        widt_n.value = (heig_n.value * 210 / 297 ).toFixed(2);
+    })
+</script>
